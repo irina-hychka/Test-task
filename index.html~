@@ -7,16 +7,9 @@
 	    <title>BMW</title>
 	    <link rel="stylesheet" href="./css/main.css" />
 	    <link rel="stylesheet" href="./css/carousel.css" type="text/css" media="screen" />
-	    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-	    
-	    <script type="text/javascript" src="js/jquerypp.custom.js"></script>
-	    <script type="text/javascript" src="js/modernizr.custom.17475.js"></script>
-	    <script type="text/javascript" src="js/jquery.elastislide.js"></script>
-	    <script type="text/javascript" src="js/jquery.poshytip.min.js"></script>
-	    <script type="text/javascript" src="js/jquery.jqtransform.js"></script>
-	    <link rel="stylesheet" type="text/css" href="css/tip-twitter.css" />
-        <link rel="stylesheet" type="text/css" href="css/elastislide.css" />
-        <link rel="stylesheet" type="text/css" href="css/jqtransform.css" />
+	    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	    <script type="text/javascript" src="js/jquery.jcarousel.min.js"/>
+            <link rel="stylesheet" type="text/css" href="css/style.css"/>
 	</head>
 
 	<body> 
@@ -110,21 +103,21 @@
 					</div>
 					<div class="questionary">
 						<span class="top-border">&nbsp; </span>
-						<form method="post" action="" class="jqtransform">
+						<form method="post" action="">
 							<h4>Ответьте на вопрос</h4>
 							<p>Какая марка машины вызывает у вас наибольшее доверие с точки зрения безопасности?</p>
 							<ul class="questionary-list">
 								<li>
 									<input type="radio" id="bmw" name="car" value="bmw" />
-									<label for="bmw" class="tip" title="Выберите">BMW</label>									
+									<label for="bmw">BMW</label>
 								</li>
 								<li>
 									<input type="radio" id="mercedes" name="car" value="mercedes" />
-									<label for="mercedes" class="tip" title="Выберите">Mercedes-Benz</label>									
+									<label for="mercedes">Mercedes-Benz</label>
 								</li>
 								<li>
 									<input type="radio" id="volvo" name="car" value="volvo" />
-									<label for="volvo" class="tip" title="Выберите">Volvo</label>									
+									<label for="volvo">Volvo</label>
 								</li>								
 							</ul>
 							<div class="submit">
@@ -214,41 +207,41 @@
 							<p>Этот автомобиль станет второй моделью немецкого производителя, после городского электрокара i3, который будет выпускаться под суббрендом "i", созданным специально для продажи экологически чистых машин. Ожидается, что производство нового спорткара начнется через два года. Как сообщалось ранее, спорткар BMW i8, созданный в стилистике концептуального автомобиля Vision EfficientDynamics, получит алюминиевое шасси и кузов из армированного углеволокном пластика - материала, разрабатываемого баварским концерном совместно с американским партнером SG Carbon. Новинка будет оснащаться гибридной силовой установкой, сочетающей в себе трехцилиндровый бензиновый мотор объемом 1,5 литра, 170-сильный электродвигатель и литий-ионный аккумуляторы.</p>
 						</div>
 						<div class="gallery">
-							<h3 ><a href="#" class="tip" title="Галерея доступна по <a href='#' style='color: #fff; border-bottom: 1px solid #4c4c4c;'>этой ссылке</a>">Фотографии<span>8/24</span></a></h3>
+							<h3>Фотографии<span>8/24</span></h3>
 							<div id="mycarousel">
 								<div class="image-wrap">
 									<img id="primary-picture" src="./images/slide1.png" alt="big image" />
 									<p>&copy; Пресс-служба «BMW»</p>
 								</div>
 	  							<div id="carousel-container">
-	  								
+	  								<div class="carousel-list-wrap">
 		    							<ul id="carousel-list">
 			        						<li class="carousel-item">
-			        							<img src="./images/slide1.png" alt="slide1" />
+			        							<img src="./images/slide1.png" alt="">
 			        						</li>
 			        						<li class="carousel-item">
-			        							<img src="./images/slide2.png" alt="slide2" />
+			        							<img src="./images/slide2.png" alt="">
 			        						</li>
 			        						<li class="carousel-item">
-			        							<img src="./images/slide3.png" alt="slide3" />
+			        							<img src="./images/slide3.png" alt="">
 			        						</li>
 			        						<li class="carousel-item">
-			        							<img src="./images/slide4.png" alt="slide4" />
+			        							<img src="./images/slide4.png" alt="">
 			        						</li>
 			        						<li class="carousel-item">
-			        							<img src="./images/slide4.png" alt="slide5" />
+			        							<img src="./images/slide4.png" alt="">
 			        						</li>
 			        						<li class="carousel-item">
-			        							<img src="./images/slide4.png" alt="slide6" />
+			        							<img src="./images/slide4.png" alt="">
 			        						</li>
 			        						<li class="carousel-item">
-			        							<img src="./images/slide4.png" alt="slide7" />
+			        							<img src="./images/slide4.png" alt="">
 			        						</li>
 			      						</ul>
-		      						
-	    							
+		      						</div>
+	    							<a href="#" class="carousel-prev">prev</a>
+	    							<a href="#" class="carousel-next">next</a>
 	  							</div>
-	  							
 							</div>
 						</div>
 								
@@ -270,30 +263,17 @@
 		</div>		
 		<script type="text/javascript">
 			jQuery(document).ready(function() {
-    			jQuery('#carousel-list').elastislide({
-					// Configuration goes here
-					
-				});
-				jQuery('.carousel-item').click(function(){
-    				var image = jQuery('img', this);
-	    			jQuery('#primary-picture').attr('src',jQuery(image).attr('src'));
-	    			jQuery('.carousel-item').removeClass('current');
-	    			jQuery(this).addClass('current');	
-	    		});
-				$('.tip').poshytip({
-					className: 'tip-twitter',
-					showTimeout: 1,
-					alignTo: 'target',
-					alignX: 'center',
-					offsetY: 5,
-					allowTipHover: false,
-					fade: false,
-					slide: false
-				});
-				jQuery(function() {
-    				//find all form with class jqtransform and apply the plugin
-    				jQuery("form.jqtransform").jqTransform();
-				});
+    			// jQuery('.carousel-item').click(function(){
+    			// 	var image = jQuery('img', this);
+	    		// 	jQuery('#primary-picture').attr('src',jQuery(image).attr('src'));
+	    		// 	jQuery('.carousel-item').removeClass('current');
+	    		// 	jQuery(this).addClass('current');	
+	    		// }); 
+
+				// jQuery('#mycarousel').jcarousel({
+				// 	// Configuration goes here
+				// 	wrap: 'circular'
+				// });
     		});
 			
 		</script>

@@ -1,0 +1,38 @@
+/*
+
+.carousel-list-wrap {
+	overflow: hidden;
+	
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;	 
+}
+#carousel-list {
+	overflow: hidden;
+	width: 636px;
+	background-color: #141413;
+	border-radius: 6px 6px 6px 6px;
+	-moz-border-radius: 6px 6px 6px 6px;
+	-webkit-border-radius: 6px 6px 6px 6px;
+	-o-border-radius: 6px 6px 6px 6px;
+	white-space: nowrap;
+}
+#carousel-list > li {
+	overflow: visible;
+	display: inline-block;
+	width: 120px;
+	height:87px;
+	margin: 26px 13px 26px 0;
+}
+#carousel-list > li img {
+	display: block;
+}
+#carousel-list > li:hover {
+	border: 1px solid #219FF7;
+	box-shadow: 0 0 8px 2px rgb(33,159,247);
+	-moz-box-shadow: 0 0 8px 2px (33,159,247);
+	-webkit-box-shadow: 0 0 8px 2px (33,159,247);	
+}
+#carousel-list > li:hover img {	
+	border: 1px solid #fff;
+}*/
